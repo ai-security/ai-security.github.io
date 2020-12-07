@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <title>Dr. Hwang's Home</title>
+        <meta charset="UTF-8">
+        <meta name="generator" content="Namo WebEditor(Trial)">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+KR" rel="stylesheet">
+        <style>
+            @import url(../mystyle.css);
+		li{margin-left:17.0pt;text-indent:-17.0pt}
+		.korean{font-size: 12pt; font-family: "Noto Serif KR", sans-serif; color: #363636;} 
+		.english{font-size: 12pt; font-family: "Lora", serif; color: #363636;}
+        </style>
+    </head>
+
+<body bg-color="white" text="black" link="blue" vlink="purple" alink="red">
+<table width="98%" height="694" cellpadding="0" cellspacing="0" bg-color="#FFCC00">
+    <tr>
+        <td width="98%" height="573" bg-color="white">
+            <p style="font-size:15pt"><b>&nbsp;&nbsp;특허 실적</b></p> <!-- 버그 이용 줄 간격 -->
+            <li class="korean"> 황성운, 한경현, 블록체인에 기반한 공개키 기반 구조 시스템 및 방법, 국내 특허(출원번호: 1020190110855), 2019. 9. 6.</p>
+            <li class="korean"> 황성운, 여인성, 추상 구문 트리의 구조와 토큰 이용한 난독화된 악성 경유지 탐지 장치 및 방법, 국내 특허(등록번호: 1019478790000), 2019. 2. 7.</p>
+            <li class="korean"> 황성운, 김인태, 내적 값을 출력하는 함수 암호화 시스템 및 방법, 국내 특허(등록번호: 1019478710000), 2019. 2. 7.</p>
+            <li class="korean"> 황성운, 한경현, 커버리지와 익스클루젼 기반의 연관 규칙 마이닝 장치 및 방법, 국내 특허(등록번호: 1018771370000), 2018. 7. 4.</p>
+            <li class="korean"> 황성운, 한경현, 해쉬 체인을 이용한 전자 영수증 관리 방법, 국내 특허(등록번호: 1017784550000), 2017. 9. 7.</p>
+            <li class="korean"> 황성운, 한경현, 웹 서버 점검을 이용해서 악성 코드를 탐지하고 차단하는 시스템 및 방법, 국내 특허(등록번호: 1017256700000), 2017. 4. 4.</p>
+            <li class="korean"> 박찬일, 김인태, 황성운, 페어링 연산 및 비밀키를 이용한 술어 암호화 방법, 국내 특허(등록번호: 1016953610000), 2017. 1. 5.</p>
+            <li class="korean"> 황성운, 여인성, 악성 경유지를 탐지하는 시스템 및 방법, 국내 특허(등록번호: 1016253380000), 2016. 5. 23.</p>
+            <li class="korean"> 황성운, 배영준, 임종은, DDoS 허위 트래픽을 차단하기 위한 시스템 및 그 방법, 국내 특허(등록번호: 1014984950000), 2015. 2. 26.</p>
+            <li class="korean"> 허준범, 박찬일, 황성운, 김진수, 수신자 프라이버시를 보호하는 브로드캐스트 암호화 방법, 국내 특허(등록번호: 1013080230000), 2013. 9. 6.</p>
+            <li class="korean"> 김인태, 황성운, 김진수, 아이디 기반의 브로드캐스트 암호화 방법, 국내 특허 (등록번호: 1013062110000), 2013. 9. 3.</p>
+            <li class="korean"> 박찬일, 허준범, 황성운, 윤현수, 김진수, 센서 네트워크 환경에서 아이디 기반의 브로드 캐스트 암호 방법, 국내 특허(등록번호: 1012986180000), 2013. 8. 14</p>
+            <li class="korean"> 김기홍, 목디스크 예방을 위한 모니터 제어 로봇 및 제어 방법, 국내 특허 (등록번호: 1012137830000), 2012. 12. 12.</p>
+            <p>&nbsp;</p>            
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>

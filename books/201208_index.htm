@@ -1,0 +1,425 @@
+
+<html>
+    <head>
+        <title>Dr. Hwang's Home</title>
+        <meta charset="UTF-8">
+        <meta name="generator" content="Namo WebEditor(Trial)">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+KR" rel="stylesheet">
+        <style>
+		body{font-size: 12pt; font-family: "Lora", serif; color: #363636;}
+		a{text-decoration:none}
+		table{width: 612px;}
+        </style>
+    </head>
+
+<body bgcolor=white lang=KO link=blue vlink=purple style='tab-interval:40.0pt'alink=red>
+
+<div style='width:612px;'>
+
+<table cellpadding="0" cellspacing="0" bg-color="#FFCC00">
+ <tr>
+  <td>
+  
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.5pt;'>Contents</span></b></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>I Fundamentals of Cryptography 1</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1 Introduction to Cryptography 3</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.1 History of Cryptography . . . . . . . . . . . . . . . . . . . . 3</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.1.1 Classical Cryptography . . . . . . . . . . . . . . . . . 4</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.1.2 Modern Cryptography . . . . . . . . . . . . . . . . . . 7</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.2 Background Review . . . . . . . . . . . . . . . . . . . . . . . 9</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.2.1 Big Oh Notation . . . . . . . . . . . . . . . . . . . . . 9</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.2.2 Polynomial . . . . . . . . . . . . . . . . . . . . . . . . 9</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.2.3 Super Polynomial . . . . . . . . . . . . . . . . . . . . . 10</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1.2.4 Negligible . . . . . . . . . . . . . . . . . . . . . . . . . 10</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2 Structure of Security Proof 13</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.1 Overview of Security Proof . . . . . . . . . . . . . . . . . . . 14</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.1.1 Why Proving Security? . . . . . . . . . . . . . . . . . 14</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.1.2 Security Goals . . . . . . . . . . . . . . . . . . . . . . 14</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.1.3 Attack Models . . . . . . . . . . . . . . . . . . . . . . 16</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.1.4 How Can We Build a Cryptographic Scheme? Lego Approach!</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>. . . . . . . . . . . . . . . . . . . . . . . . . . 17</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.1.5 Computational Assumptions . . . . . . . . . . . . . . 17</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.2 Proof by Reduction . . . . . . . . . . . . . . . . . . . . . . . 18</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.2.1 What Is Reduction? . . . . . . . . . . . . . . . . . . . 19</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.2.2 Outline of Security Proof by Reduction . . . . . . . . 19</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.3 Random Oracle Methodology . . . . . . . . . . . . . . . . . . 20</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.3.1 Security Proof in the Random Oracle Model . . . . . . 21</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.4 Sequence of Games . . . . . . . . . . . . . . . . . . . . . . . 22</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.4.1 Hybrid Argument . . . . . . . . . . . . . . . . . . . . 24</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2.5 The Generic Group Model . . . . . . . . . . . . . . . . . . . 25</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercise . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>3 Private-Key Encryption (1) 27</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>3.1 Defining Computationally-Secure Encryption . . . . . . . . . 27</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>3.2 Pseudorandomness . . . . . . . . . . . . . . . . . . . . . . . . 29</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>3.3 A Private-Key Encryption Scheme Based on Pseudorandom</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Generator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4 Private-Key Encryption (2) 35</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4.1 Stream Ciphers . . . . . . . . . . . . . . . . . . . . . . . . . 35</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4.2 Stronger Security Notions . . . . . . . . . . . . . . . . . . . . 36</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4.2.1 Security for Multiple Encryptions . . . . . . . . . . . . 36</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4.2.2 Security for Chosen-Plaintext Attack . . . . . . . . . . 38</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4.3 Constructing CPA-Secure Encryption Scheme . . . . . . . . 42</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>4.4 Advanced Encryption Standard . . . . . . . . . . . . . . . . 47</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5 Private-Key Encryption (3) 51</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.1 Block Ciphers and Modes of Operation . . . . . . . . . . . . 51</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.1.1 Electronic Code Book (ECB) Mode . . . . . . . . . . 52</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.1.2 Cipher Block Chaining (CBC) Mode . . . . . . . . . . 52</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.1.3 Counter (CTR) Mode . . . . . . . . . . . . . . . . . . 54</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.2 CPA-Securities of Modes of Operation . . . . . . . . . . . . . 55</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.2.1 IND-CPA Adversary . . . . . . . . . . . . . . . . . . . 55</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.2.2 A Block Cipher Per Se Is Not IND-CPA Secure . . . . 56</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.2.3 ECB Is Not IND-CPA Secure . . . . . . . . . . . . . . 56</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.2.4 CBC Is IND-CPA Secure . . . . . . . . . . . . . . . . 57</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.2.5 CTR Is IND-CPA Secure . . . . . . . . . . . . . . . . 57</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.3 Security Against Chosen-Ciphertext Attack (CCA) . . . . . 59</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.3.1 IND-CCA Adversary . . . . . . . . . . . . . . . . . . . 61</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.3.2 A CPA-Secure Encryption Scheme from Any Pseudorandom</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Function Is Not CCA-Secure . . . . . . . . . . 62</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>5.3.3 A CPA-Secure Encryption Scheme Using CBC Mode</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>(Random Version) Is Not CCA-Secure . . . . . . . . . 62</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6 Message Authentication Code 65</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.1.1 Encryption vs. Message Authentication . . . . . . . . 66</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.2 Message Authentication Code . . . . . . . . . . . . . . . . . 67</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.3 Constructing Secure Message Authentication Code . . . . . . 70</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.3.1 Fixed-Length MAC . . . . . . . . . . . . . . . . . . . . 70</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.3.2 Variable-Length MAC . . . . . . . . . . . . . . . . . . 72</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.4 CBC-MAC . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.5 Obtaining Encryption and Message Authentication . . . . . 77</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>6.5.1 Constructing CCA-Secure Encryption Schemes Using</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>MAC . . . . . . . . . . . . . . . . . . . . . . . . . . . 79</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7 Hash Function 87</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.1 Definitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.1.1 Collision Resistance . . . . . . . . . . . . . . . . . . . 88</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.1.2 Weaker Notions of Security . . . . . . . . . . . . . . . 89</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.2 Design of Collision-Resistant Hash Functions . . . . . . . . . 90</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.2.1 Compression Function Proved Secure Under the Discrete</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Log Assumption . . . . . . . . . . . . . . . . . . 90</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.2.2 Compression Functions Based on Secure Block Ciphers 93</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.2.3 Proprietary Compression Functions . . . . . . . . . . . 93</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.3 The Merkle-Damgard Transform . . . . . . . . . . . . . . . . 93</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.4 Generic Attacks on Hash Functions . . . . . . . . . . . . . . 95</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.4.1 Birthday Attacks for Finding Collisions . . . . . . . . 95</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.4.2 Small-Space Birthday Attacks . . . . . . . . . . . . . . 96</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.5 Message Authentication Using Hash Functions . . . . . . . . 97</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.5.1 Hash-and-MAC . . . . . . . . . . . . . . . . . . . . . . 97</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.5.2 HMAC . . . . . . . . . . . . . . . . . . . . . . . . . . . 97</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.6 Applications of Hash Function . . . . . . . . . . . . . . . . . 99</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.6.1 Fingerprinting and Deduplication . . . . . . . . . . . . 99</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.6.2 Merkle Trees . . . . . . . . . . . . . . . . . . . . . . . 99</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.6.3 Password Hashing . . . . . . . . . . . . . . . . . . . . 101</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.6.4 Key Derivation . . . . . . . . . . . . . . . . . . . . . . 102</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>7.6.5 Commitment Schemes . . . . . . . . . . . . . . . . . . 102</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8 Introduction to Number Theory 105</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 105</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.1 Division, Prime, and Modulo . . . . . . . . . . . . . . 106</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.2 Greatest Common Divisor . . . . . . . . . . . . . . . . 107</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.3 Euclidean Algorithm . . . . . . . . . . . . . . . . . . . 107</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.4 Extended Euclidean Algorithm . . . . . . . . . . . . . 107</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.5 Fermat’s Little Theorem . . . . . . . . . . . . . . . . . 107</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.6 Euler’s Theorem . . . . . . . . . . . . . . . . . . . . . 108</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.7 Exponentiation and Logarithm . . . . . . . . . . . . . 108</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.8 Set of Residues Zn . . . . . . . . . . . . . . . . . . . . 109</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.9 Inverse Modulo . . . . . . . . . . . . . . . . . . . . . . 110</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.1.10 Euler’s Criterion . . . . . . . . . . . . . . . . . . . . . 112</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.2 Algebraic Structure . . . . . . . . . . . . . . . . . . . . . . . 112</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.2.1 Group . . . . . . . . . . . . . . . . . . . . . . . . . . . 112</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.2.2 Ring . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.2.3 Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.2.4 GF(2n) . . . . . . . . . . . . . . . . . . . . . . . . . . 115</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>8.2.5 Elliptic Curve . . . . . . . . . . . . . . . . . . . . . . . 116</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9 Public-Key Encryption 119</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.1 Discrete Logarithm and Its Related Assumptions . . . . . . . 120</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.2 The Diffie-Hellman Key Exchange Protocol . . . . . . . . . . 122</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.3 Overview of Public-Key Encryption . . . . . . . . . . . . . . 125</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.3.1 Security Against CPA . . . . . . . . . . . . . . . . . . 126</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.3.2 Security Against CCA . . . . . . . . . . . . . . . . . . 129</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.3.3 Hybrid Encryption and the KEM/DEM Paradigm . . 130</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4 Public-Key Encryption Schemes . . . . . . . . . . . . . . . . 131</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.1 The El Gamal Encryption . . . . . . . . . . . . . . . . 131</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.2 The Plain (aka Textbook) RSA Encryption . . . . . . 135</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.2.1 RSA Cryptosystem Based on Elliptic Curve . 137</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.3 The Padded RSA Encryption . . . . . . . . . . . . . . 138</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.4 The CPA-Secure RSA Encryption Under the RSA Assumption</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>in the Random Oracle Model . . . . . . . . 140</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.5 The CCA-Secure RSA Encryption Under the RSA Assumption</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>in the Random Oracle Model . . . . . . . . 143</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.6 The RSA-OAEP Encryption . . . . . . . . . . . . . . 147</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.7 The Cramer-Shoup Encryption . . . . . . . . . . . . . 147</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>9.4.8 The Paillier Encryption . . . . . . . . . . . . . . . . . 159</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10 Digital Signature 161</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.2 Definitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.3 The El Gamal Signatures . . . . . . . . . . . . . . . . . . . . 164</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.4 The RSA Signatures . . . . . . . . . . . . . . . . . . . . . . . 170</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.4.1 Plain RSA . . . . . . . . . . . . . . . . . . . . . . . . . 171</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.4.2 Full Domain Hash RSA . . . . . . . . . . . . . . . . . 172</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.4.3 Probabilistic Signature Scheme (PSS) . . . . . . . . . 173</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.5 Blockchain: Application of Hash Function and Public-Key Encryption</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.5.1 Blockchain 1.0: Early Development of Blockchain Technology</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>. . . . . . . . . . . . . . . . . . . . . . . . . . . 174</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.5.1.1 The Use of Cryptography in Blockchain . . . 176</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.5.1.2 Other Consensus Algorithms . . . . . . . . . 177</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.5.2 Blockchain 2.0: Smart Contract Beyond Cryptocurrency 178</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>10.5.3 Private, Consortium, and Public Blockchain . . . . . . 178</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>II Identity-Based Encryption and Its Variants 181</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11 Identity-Based Encryption (1) 183</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 184</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11.2.1 Bilinear Map (Weil and Tate Pairing) . . . . . . . . . 184</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11.2.2 Hardness Assumption . . . . . . . . . . . . . . . . . . 186</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11.3 Identity-Based Encryption . . . . . . . . . . . . . . . . . . . 186</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>11.4 Boneh-Franklin IBE [24] . . . . . . . . . . . . . . . . . . . . 187</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12 Identity-Based Encryption (2) 201</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 203</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.2.1 Security Model . . . . . . . . . . . . . . . . . . . . . . 203</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.2.2 Hardness Assumptions . . . . . . . . . . . . . . . . . . 204</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.2.3 How to Achieve a Tight Reduction? . . . . . . . . . . 206</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.3 Gentry’s IBE [48] . . . . . . . . . . . . . . . . . . . . . . . . 208</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.3.1 Construction 1: Chosen-Plaintext Security . . . . . . . 208</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.3.2 Security 1: Chosen-Plaintext Security . . . . . . . . . 210</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.3.3 Construction 2. Chosen-Ciphertext Security . . . . . . 216</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>12.3.4 Security 2: Chosen-Ciphertext Security . . . . . . . . . 218</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13 Identity-Based Encryption (3) 231</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 233</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.2.1 Security Model . . . . . . . . . . . . . . . . . . . . . . 234</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.2.2 Hardness Assumptions . . . . . . . . . . . . . . . . . . 234</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.3 Dual System Encryption . . . . . . . . . . . . . . . . . . . . 235</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.4 Waters’ IBE [99] . . . . . . . . . . . . . . . . . . . . . . . . . 239</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>13.4.1 Proof of IBE Security . . . . . . . . . . . . . . . . . . 244</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14 Hierarchical Identity-Based Encryption 263</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 265</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.2.1 General Construction of HIBE . . . . . . . . . . . . . 265</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.2.2 Security Model for HIBE . . . . . . . . . . . . . . . . 266</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.2.3 Composite Order Bilinear Groups . . . . . . . . . . . 267</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.2.4 Hardness Assumptions . . . . . . . . . . . . . . . . . . 268</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.2.5 A “Master Theorem” for Hardness in Composite Order</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Bilinear Groups [60] . . . . . . . . . . . . . . . . . . . 269</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.3 Waters’ Realization . . . . . . . . . . . . . . . . . . . . . . . 274</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.4 Waters’ HIBE with Composite Order . . . . . . . . . . . . . 275</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.4.1 Proof of HIBE Security . . . . . . . . . . . . . . . . . 281</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.5 The Generic Group Model . . . . . . . . . . . . . . . . . . . 292</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.5.1 The Decision Linear Diffie-Hellman Assumption . . . . 292</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>14.5.2 The Linear Problem in Generic Bilinear Groups . . . . 293</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15 Identity-Based Encryption (4) 297</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 299</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15.2.1 Security Model . . . . . . . . . . . . . . . . . . . . . . 299</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15.2.2 Hardness Assumption . . . . . . . . . . . . . . . . . . 301</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15.3 Boneh-Boyen IBE [19] . . . . . . . . . . . . . . . . . . . . . . 301</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>15.3.1 Proof of IBE Security . . . . . . . . . . . . . . . . . . 303</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16 Tight Reduction 307</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 308</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.2 Why Is Tight Reduction Important? . . . . . . . . . . . . . . 308</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.3 Obstacles and Solutions in Tight Reduction . . . . . . . . . . 309</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.3.1 All-and-Any Strategy . . . . . . . . . . . . . . . . . . 309</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.3.1.1 Relationship Between Security Models and</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Strategies . . . . . . . . . . . . . . . . . . . . 310</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.3.2 Searching Method . . . . . . . . . . . . . . . . . . . . 311</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.3.3 Self-Decryption Paradox . . . . . . . . . . . . . . . . . 312</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.4 All-and-Any Strategy Techniques in the Random Oracle Model 312</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.4.1 Katz-Wang Technique . . . . . . . . . . . . . . . . . . 313</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>16.4.2 Park-Lee Technique . . . . . . . . . . . . . . . . . . . 314</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17 Transformation Technique 317</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17.1 Canetti-Halevi-Katz Transformation [32] . . . . . . . . . . . 317</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17.1.1 Definitions . . . . . . . . . . . . . . . . . . . . . . . . 318</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17.1.1.1 Binary Tree Encryption . . . . . . . . . . . . 318</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17.1.1.2 One-Time Signature . . . . . . . . . . . . . . 320</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17.1.2 Chosen-Ciphertext Security from IBE . . . . . . . . . 321</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>17.1.3 Chosen-Ciphertext Security for BTE Schemes . . . . . 325</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18 Broadcast Encryption 331</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . 332</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.2 Subset-Cover Revocation Framework [78] . . . . . . . . . . . 333</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.2.1 Problem Definition . . . . . . . . . . . . . . . . . . . . 333</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.2.2 The Framework . . . . . . . . . . . . . . . . . . . . . . 333</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.2.3 Two Subset-Cover Algorithms . . . . . . . . . . . . . . 335</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.2.3.1 Complete Subtree (CS) Method . . . . . . . 337</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.2.3.2 Subset Difference (SD) Method . . . . . . . . 340</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3 Identity-Based Broadcast Encryption . . . . . . . . . . . . . 347</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3.1 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . 347</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3.1.1 Definition . . . . . . . . . . . . . . . . . . . . 347</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3.1.2 Security Model . . . . . . . . . . . . . . . . . 348</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3.1.3 Hardness Assumptions . . . . . . . . . . . . 349</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3.2 Delerablée’s Scheme [37] . . . . . . . . . . . . . . . . . 351</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>18.3.3 Security Analysis of Delerablée’s Scheme . . . . . . . . 352</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19 Attribute-Based Encryption 359</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 360</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.2 Access Structure . . . . . . . . . . . . . . . . . . . . . . . . . 361</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.2.1 Secret Sharing Scheme . . . . . . . . . . . . . . . . . . 361</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.2.2 Access Trees . . . . . . . . . . . . . . . . . . . . . . . 361</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.2.3 Satisfying the Access Tree . . . . . . . . . . . . . . . . 362</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.3 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 364</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.3.1 The Generic Bilinear Group Model . . . . . . . . . . . 364</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.3.2 The Decisional Bilinear Diffie-Hellman (DBDH) Assumption</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>. . . . . . . . . . . . . . . . . . . . . . . . . 365</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.3.3 Selective-Set Model for KP-ABE . . . . . . . . . . . . 365</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.3.4 Security Model for CP-ABE . . . . . . . . . . . . . . . 365</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.4 KP-ABE [55] . . . . . . . . . . . . . . . . . . . . . . . . . . . 366</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.4.1 Security Analysis of KP-ABE . . . . . . . . . . . . . . 369</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.4.2 Probability Analysis . . . . . . . . . . . . . . . . . . . 372</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>19.5 CP-ABE [14] . . . . . . . . . . . . . . . . . . . . . . . . . . . 373</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20 Secret Sharing 383</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2 Efficient Secret Sharing . . . . . . . . . . . . . . . . . . . . . 384</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.1 Shamir’s Secret Sharing [90] . . . . . . . . . . . . . . . 384</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.1.1 Mathematical Definition . . . . . . . . . . . . 385</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.1.2 The Construction . . . . . . . . . . . . . . . 385</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.1.3 Example . . . . . . . . . . . . . . . . . . . . 385</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.2 Blakley’s Secret Sharing [16] . . . . . . . . . . . . . . 387</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.2.1 The Construction . . . . . . . . . . . . . . . 387</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>20.2.2.2 Example . . . . . . . . . . . . . . . . . . . . 388</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercise . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21 Predicate Encryption and Functional Encryption 391</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 392</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.1.1 Predicate Encryption . . . . . . . . . . . . . . . . . . 392</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.1.2 Functional Encryption . . . . . . . . . . . . . . . . . . 393</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 395</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.2.1 Hardness Assumptions . . . . . . . . . . . . . . . . . . 395</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.2.2 Definition of Predicate Encryption . . . . . . . . . . . 397</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.2.3 Definition of Functional Encryption . . . . . . . . . . 399</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.3 Predicate-Only Encryption [62] . . . . . . . . . . . . . . . . . 400</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.3.1 Proof of Predicate-Only Encryption Security . . . . . 402</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.4 Predicate Encryption [62] . . . . . . . . . . . . . . . . . . . . 410</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.4.1 Proof of Predicate Encryption Security . . . . . . . . . 412</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.5 Functional Encryption . . . . . . . . . . . . . . . . . . . . . . 417</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.5.1 Proof of Functional Encryption Security . . . . . . . . 419</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.5.2 Applications of Functional Encryption . . . . . . . . . 423</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.5.2.1 Distance Measurement . . . . . . . . . . . . 423</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.5.2.2 Exact Threshold . . . . . . . . . . . . . . . . 424</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>21.5.2.3 Weighted Average . . . . . . . . . . . . . . . 424</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>III Post-Quantum Cryptography 425</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>22 Introduction to Lattice 427</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>22.1 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 427</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>22.2 Lattice Problems . . . . . . . . . . . . . . . . . . . . . . . . . 428</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>22.3 NTRU Cryptosystem . . . . . . . . . . . . . . . . . . . . . . 429</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23 Lattice-Based Cryptography 433</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 433</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.2 Preliminaries . . . . . . . . . . . . . . . . . . . . . . . . . . . 434</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.2.1 Distributions . . . . . . . . . . . . . . . . . . . . . . . 435</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.3 Lattice-Based Cryptography . . . . . . . . . . . . . . . . . . 435</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.3.1 Learning with Errors (LWE) . . . . . . . . . . . . . . 436</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.3.2 Learning with Rounding (LWR) . . . . . . . . . . . . 438</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.3.3 Ring Variants of LWE and LWR . . . . . . . . . . . . 439</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.4 (LWE+LWR)-Based Public-Key Encryption [34] . . . . . . 439</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.4.1 The Construction . . . . . . . . . . . . . . . . . . . . . 440</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.4.2 Correctness . . . . . . . . . . . . . . . . . . . . . . . . 441</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.4.3 Security . . . . . . . . . . . . . . . . . . . . . . . . . . 441</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.5 Ring Variant of Lizard . . . . . . . . . . . . . . . . . . . . . 442</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>23.5.1 The Construction . . . . . . . . . . . . . . . . . . . . . 444</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24 Introduction to Linear Codes 447</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.1 Fundamentals of Coding Theory . . . . . . . . . . . . . . . . 448</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.2 Basics of Linear Codes . . . . . . . . . . . . . . . . . . . . . 448</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.2.1 Generator Matrix and Parity-Check Matrix . . . . . . 449</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.3 Types of Decoding . . . . . . . . . . . . . . . . . . . . . . . . 453</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.3.1 Maximum-Likelihood Decoding . . . . . . . . . . . . . 453</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.3.2 Minimum-Distance Decoding . . . . . . . . . . . . . . 453</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.3.3 Syndrome Decoding . . . . . . . . . . . . . . . . . . . 454</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.4 Hamming Geometry and Code Performance . . . . . . . . . 454</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5 Types of Codes . . . . . . . . . . . . . . . . . . . . . . . . . 455</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.1 Hamming Code . . . . . . . . . . . . . . . . . . . . . . 455</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.2 Cyclic Codes . . . . . . . . . . . . . . . . . . . . . . . 456</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.3 Generalized Reed-Solomon (GRS) Codes . . . . . . . . 457</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.4 Goppa Codes . . . . . . . . . . . . . . . . . . . . . . . 457</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.4.1 Construction of Goppa Codes . . . . . . . . 457</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.4.2 Binary Goppa Codes . . . . . . . . . . . . . 457</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.5.4.3 Parity-Check Matrix of Goppa Codes . . . . 458</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>24.6 Hard Problems . . . . . . . . . . . . . . . . . . . . . . . . . . 459</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 459</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25 Code-Based Cryptography 463</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.1 McEliece Cryptosystem [75] . . . . . . . . . . . . . . . . . . 464</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.1.1 Key Generation . . . . . . . . . . . . . . . . . . . . . . 464</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.1.2 Encryption . . . . . . . . . . . . . . . . . . . . . . . . 465</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.1.3 Decryption . . . . . . . . . . . . . . . . . . . . . . . . 465</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.2 Niederreiter Cryptosystem . . . . . . . . . . . . . . . . . . . 466</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.2.1 Key Generation . . . . . . . . . . . . . . . . . . . . . . 466</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.2.2 Encryption . . . . . . . . . . . . . . . . . . . . . . . . 467</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.2.3 Decryption . . . . . . . . . . . . . . . . . . . . . . . . 468</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.3 Security Analysis of McEliece and Niederreiter . . . . . . . . 468</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4 QC-MDPC McEliece Cryptosystem . . . . . . . . . . . . . . 469</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.1 MDPC and QC-MDPC Codes . . . . . . . . . . . . . 470</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.1.1 MDPC Code . . . . . . . . . . . . . . . . . . 470</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.1.2 MDPC Code Construction . . . . . . . . . . 470</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.1.3 QC-MDPC Code Construction . . . . . . . . 470</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.2 QC-MDPC McEliece Cryptosystem [101] . . . . . . . 471</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.2.1 Key Generation . . . . . . . . . . . . . . . . 471</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.2.2 Encryption . . . . . . . . . . . . . . . . . . . 471</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>25.4.2.3 Decryption . . . . . . . . . . . . . . . . . . . 472</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 472</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>IV Implementations of Selected Algorithms 475</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26 Selected Algorithms 477</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . 477</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.2 Boneh-Franklin IBE . . . . . . . . . . . . . . . . . . . . . . . 478</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.3 Boneh-Boyen IBE . . . . . . . . . . . . . . . . . . . . . . . . 478</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.4 Broadcast Encryption . . . . . . . . . . . . . . . . . . . . . . 478</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.5 Ciphertext-Policy Attribute-Based Encryption (CP-ABE) . . 479</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.6 Predicate Encryption (PE) . . . . . . . . . . . . . . . . . . . 479</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.7 Rivest-Shamir-Adleman (RSA) . . . . . . . . . . . . . . . . . 480</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.8 Elliptic Curve Digital Signature Algorithm (ECDSA) . . . . 480</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.9 QC-MDPC McEliece . . . . . . . . . . . . . . . . . . . . . . 480</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.10 NTRUEncrypt . . . . . . . . . . . . . . . . . . . . . . . . . 481</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.11 Number Theoretic Transform . . . . . . . . . . . . . . . . . 481</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.12 The Paillier Encryption . . . . . . . . . . . . . . . . . . . . 482</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.13 AES Block Cipher . . . . . . . . . . . . . . . . . . . . . . . 482</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>26.14 wolfSSL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 483</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Bibliography 485</span></p>
+  <br>
+  
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:11.5pt;'>Preface</span></b></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>Security is critical in modern society, particularly in the Internet era, where things as well as people are interconnected. Cryptography plays a critical role to ensure the security of the society by serving as a primitive and building block.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>  </span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>The goal of this book is to introduce the foundations of cryptography to students, researchers, and practitioners so that they design their own secure systems, analyze the existing cryptographic schemes, or apply the provably secure cryptographic schemes to the real world.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>  </span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'><b>Features of the Book</b> Compared to other subjects, cryptography is generally accepted as “difficult to understand,” mainly because the underlying proofs are kind of mental games, which may be hardly understandable. To ease the understanding of cryptography, we introduced detailed-and-intuitive explanations, relevant implementations, and extensible applications in this book. Particularly, sometimes, but not always, we found that detailed-andintuitive explanations are especially helpful for beginners to figure out the structural flow of security proof of cryptographic schemes; it becomes easier to understand a specific complex theoretical concept by implementing itself or constructing relevant applications. Specifically, this book is designed to have the following in mind in detail:</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;1. giving a big picture of cryptography, wide and deep</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(a) the basic building blocks</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(b) various cryptographic schemes</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(c) applications to the real world</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;2. providing fundamentals on cryptography</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(a) formal definitions of security</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(b) complexity assumptions of computational problems</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(c) proof techniques</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;3. giving practice on how to implement cryptographic schemes efficiently</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(a) fundamental mathematical tools for efficient implementation</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(b) efficient techniques to optimize the implementation based on specific hardware</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;&nbsp;(c) trade-off to be made during implementation (e.g., memory versus speed)</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>  </span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'><b>Structures of the Book</b> In line with the above design purposes and features of the book, the whole book comprises the following four parts:</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;1. Part I: Fundamentals of classical and modern cryptography are explained including the structure of security proofs, private-key encryption, message authentication code, hash function, basic number theory, public-key encryption, and digital signature.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;2. Part II: Identity-based encryption can use any arbitrary data for an identity as public keys, which is one of the big differences from traditional public-key encryption, which makes identity-based encryption easier to use, less expensive, and more practical.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;3. Part III: Post-quantum cryptography has emerged recently to prepare for the near future, as existing conventional cryptography is expected to be broken by advanced algorithms executed on quantum computers. Two representative post-quantum approaches, latticebased and code-based, are explored.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>&nbsp;4. Part IV: Various popular cryptographic schemes are implemented using the MIRACL library, which is based on C/C++ programming language. Some post-quantum schemes are implemented with plain C codes and evaluated on the Graphics Processing Units (GPU) with massively parallel architecture. Mathematical tools like Montgomery reduction, Chinese remainder theorem (CRT), and number theoretic transform (NTT) are used to optimize the performance.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>  </span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'><b>Guide to the Book</b> Readers will get much help if they study considering the following guidelines:</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>1. <b>Proof:</b> One of the key design issues of this book is how to introduce seemingly hard security proofs of cryptographic schemes to readers, particularly beginners and self-learners, in an intuitively easy and detailed method so that they could completely understand them by just following the book. Readers are first recommended to grasp the big picture of security proofs by taking a look at Chapter 2 and revisit this chapter whenever they study a specific security proof techniques. Particularly, they are encouraged to walk through the proofs in each chapter of Part 1 in sequence, which comprises the fundamentals of cryptography. Readers will get many benefits by referring to intuitions or outlines, if any, underlying a specific proof before going deeper into the proof itself. When they go deeper into a specific proof, they can easily understand it by just following the detailed step-by-step explanations of the proof, unique feature quite different from the other cryptography textbooks. If readers fully understand the key proof techniques in Parts 1 and 2, they can easily understand more complex proof techniques.</span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'>2. <b>Implementation:</b> Most of the implementations in this book are based on the MIRACL library with detailed guidance on setting up the compilation. The readers can first explore the implementation of ECDSA and Paillier, which are fundamental cryptography. Next, readers may implement more advanced cryptographic schemes including IBE, BE, CP-ABE, and PE. The implementation of RSA involves parallel programming using GPU, which can be explored at the later stage. The readers can explore the implementation of lattice-based and code-based cryptography, wherein various optimization techniques are presented. Finally, the readers can also explore the implementation of AES and SSL. <b>All implementation source code can be accessible at https://aisecurity.github.io.</b></span></p>
+  <p><span lang=EN-US style='font-size:10.0pt;'><b>Comments and Errata</b> We would appreciate it if you email any comments or errata to sohwang@gachon.ac.kr. A list of errata will be maintained at https://ai-security.github.io.</span></p>
+  <br>
+	  
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='color:windowtext'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

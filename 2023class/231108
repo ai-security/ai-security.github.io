@@ -1,0 +1,31 @@
+<html>
+    
+<head>
+    <title>Dr. Hwang's Home</title>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Namo WebEditor(Trial)"></head>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+KR" rel="stylesheet">
+    <style>
+	@import url(../mystyle.css);
+    </style>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<table width="614" height="500" cellpadding="0" cellspacing="0" bgcolor="#FFCC00" style="line-height:150%; margin-top:0; margin-bottom:0;">
+    <tr>
+        <td width="614" height="289" bgcolor="white">
+	  <br>
+	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><font size="3">2023년 2학기 C언어 팀별 과제</font></p>
+	  <br>
+	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><font size="3">팀별 과제 1</font></p>
+	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><a href="C언어(2023년도, 2학기, 13978, 002)-팀별 과제 1-731717.zip" target="_blank"><font size="3">파일(1/3)</font></a> <a href="Implementation 2020-09-14.z01" target="_blank"><font size="3">파일(2/4)</font></a> <a href="Implementation 2020-09-14.z02" target="_blank"><font size="3">파일(3/4)</font></a> <a href="Implementation 2020-09-14.z03" target="_blank"><font size="3">파일(4/4)</font></a></p>
+   
+	  <br>
+	  <p style="text-align:left; line-height:150%; style='font-size:11.0pt"><font size="3">팀별 과제 2</font></p>
+        </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+
+</html>

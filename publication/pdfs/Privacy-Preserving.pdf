@@ -1,0 +1,86 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="/ag/aa_styles/ieee_ag.css" />
+<link rel="stylesheet" type="text/css" href="/ag/aa_styles/jquery-ui-overrides.css" />
+	<title>Exceptional Even Occurred!</title>
+	<style>
+	body, p { font-family:Tahoma; font-size:10pt; padding-left:30; }
+	pre { font-size:8pt; }
+	</style>
+</head>
+<body>
+
+
+
+<form id="f">
+
+<div id="page">
+
+
+
+
+
+
+
+
+<body>
+<form id="f">
+
+<div id="page">
+
+
+
+	<div class="bounds">
+
+<font color="red">
+
+
+
+<p><font color="#FF0000"><b>Message: </b>An error occurred during file download. Please clear your cache and cookies, and try typing in the URL of <a href="https://authorgateway.ieee.org" target="_blank">https://authorgateway.ieee.org</a>. Key in the URL, do not use a bookmark. Also, if that does not work, please try accessing the website from your personal computer or while you are out of the office.<br>If the download continues to fail, please contact the IEEE Journals Production Manager or send an email message to <a href="mailto:authorgatewayhelp@ieee.org">authorgatewayhelp@ieee.org</a> for assistance.</font></p>
+
+<p><font color="#FF0000">We apologize for the inconvenience.</font></p>
+
+
+<p><font color="#FF0000">Error occurred on FailureDownload</font>
+
+
+<p><font color="#FF0000"></font>
+</p>
+
+</font>
+
+
+
+
+
+</div>
+
+       
+
+
+  
+  <div id="footer">
+    
+		<div class="bounds">
+
+			<p>
+			<a href="mailto:authorgatewayhelp@ieee.org">Help</a> <span class="pipe">|</span> <a href="http://www.ieee.org/about/contact_center/index.html?WT.mc_id=hpf_contact" target="_blank">Contact Us</a> <span class="pipe">|</span> <a href="http://www.ieee.org/security_privacy.html?WT.mc_id=hpf_priv" target="_blank">Privacy &amp; Security</a> <span class="pipe">|</span> <a href="http://ieee.org" target="_blank">IEEE.org</a> <span class="pipe">|</span> <a href="http://ieeexplore.ieee.org" target="_blank">IEEE <em>Xplore&#174;</em> Digital Library</a> <span class="pipe">|</span> <a href="http://www.ieee.org/web/aboutus/whatis/policies/p9-26.html" target="_blank">Nondiscrimination Policy</a><br />
+			<span class="copy">&copy; Copyright 2025 IEEE - All Rights Reserved</span>
+			</p>
+    
+		</div>
+	</div>
+    
+</div>
+
+</form>
+
+
+
+</body>
+</html>

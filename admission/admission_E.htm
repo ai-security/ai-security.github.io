@@ -5,7 +5,13 @@
         <meta name="generator" content="Namo WebEditor(Trial)">
         <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+KR" rel="stylesheet">
         <style>
-		body{font-size: 12pt; font-family: "Lora", serif; color: #363636;}
+            body{font-size: 12pt; font-family: "Lora", serif; color: #363636;}
+            /* Make the embedded PDF responsive inside the content cell */
+            #pdf-container { width: 100%; height: 525px; }
+            @media (min-width: 640px) {
+                /* if you want the PDF area taller on larger screens */
+                #pdf-container { height: 75vh; min-height: 525px; }
+            }
         </style>
     </head>
 
@@ -15,24 +21,33 @@
         <td width="639" height="525" bgcolor="white">
             <p class=MsoNormal><font size="4">Admission</font></p>
 
-<p><font size="2">We are seeking people including graduates,postdocs, and visitors who are well-prepared to commit their research or practices. Funding including tuition fee, cost of living, and incentive is available to applicants depending upon their performances. To get admission, they should have one of the following language certificates with test scores of at least:</font></p>
+            <!-- Embed the PDF. Use the relative path if the PDF is in the same folder. -->
+            <div id="pdf-container">
+                <!-- Primary: browser embedded PDF via <iframe> -->
+                <iframe
+                    src="MS-PHD_Recruitment_Spring_2027.pdf"
+                    width="100%"
+                    height="100%"
+                    style="border: none;">
+                    <!-- Fallback content shown inside browsers that don't support iframe PDF embedding -->
+                </iframe>
 
-            <p><font size="2">-TOEFL 550 (CBT 210, iBT 80)</font></p>
-            <p><font size="2">-TOEIC 685</font></p>
-            <p><font size="2">-TOPIK (Standard Test of Proficiency in Korean) Level 3</font></p>
-            <p><font size="2">-IELTS 5.5</font></p>
-            <p><font size="2">-TEPS (Test of English Proficiency developed by Seoul National University) 550</font></p>
-            <br>
-            <p class=MsoNormal><font size="4">Introduction to Current Projects</font></p>
-            <p class=MsoNormal><font size="3">Project 1: Machine/deep learning and cybersecurity</font></p>
-	    <p><font size="2">Machine learning is a paradigm shifting technology that is widely used to solve many problems in science and engineering. On the other hand, cybersecurity is important in protecting the confidentiality, integrity, and authenticity of data. In this project, the candidate is required to use machine learning/deep learning to solve some existing problems in real world. He/she can also propose cybersecurity techniques to secure the existing machine learning/deep learning applications. Good programming skill (e.g. python) and interest in machine learning is required to undertake this project.</font></p>
-            <br>
-            <p class=MsoNormal><font size="3">Project 2: Implementation of post-quantum cryptography schemes in GPU, microcontroller or FPGA</font></p>
-	    <p><font size="2">The candidate will be trained on the mathematical foundation of post-quantum cryptography (PQC) schemes, especially lattice, code and multivariate based schemes. He/she is expected to implement the selected PQC schemes in hardware platform like GPU, microcontroller or FPGA. Good programming skill (Verilog, C/C++ or assembly language) is required to undertake this project. However, knowledge to program GPU (e.g. CUDA or OpenCL) is optional.</font></p>
-            <br>
-            <p class=MsoNormal><font size="3">Project 3: Efficient and secure computation on encrypted data</font></p>
-	    <p><font size="2">Fully homomorphic encryption (FHE) is a new technique that allows the computation to be carried out in encrypted domain. This is especially useful in protecting the user privacy in several areas like medical and financial information system. In this project, the candidate will be trained on the mathematical foundation of FHE schemes, which is mainly based on lattice hard problems. He/she is expected to implement the selected FHE schemes in CPU or GPU to perform a designated task (e.g. machine learning). Good programming skill (C/C++ or python) is required to undertake this project. However, knowledge to program GPU (e.g. CUDA or OpenCL) is optional.</font></p>
-            <br>
+                <!-- Better fallback for older browsers: <object> with an explicit download link -->
+                <object
+                    data="MS-PHD_Recruitment_Spring_2027.pdf"
+                    type="application/pdf"
+                    width="100%"
+                    height="100%"
+                    aria-label="Admission PDF">
+                    <p>Your browser does not support embedded PDFs. You can
+                        <a href="/admission/MS-PHD_Recruitment_Spring_2027.pdf" target="_blank" rel="noopener">open or download the PDF</a>.
+                    </p>
+                </object>
+            </div>
+
+            <!-- Optional short note / link for accessibility -->
+            <p><font size="2">If the PDF does not open in your browser, <a href="/admission/MS-PHD_Recruitment_Spring_2027.pdf" target="_blank" rel="noopener">click here to open it in a new tab</a>.</font></p>
+
        </td>
     </tr>
 </table>

@@ -1,11 +1,11 @@
-﻿<html>
+<html>
     <head>
         <title>Dr. Hwang's Home</title>
         <meta charset="UTF-8">
         <meta name="generator" content="Namo WebEditor(Trial)">
         <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+KR" rel="stylesheet">
         <style>
-            body{font-size: 12pt; font-family: "Lora", serif; color: #363636;}
+            body {font-size: 12pt; font-family: "Lora", serif; color: #363636;}
             /* Make the embedded PDF responsive inside the content cell */
             #pdf-container { width: 100%; height: 525px; }
             @media (min-width: 640px) {
@@ -14,43 +14,29 @@
             }
         </style>
     </head>
+    <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+        <table width="639" height="525" cellpadding="0" cellspacing="0" bgcolor="#FFCC00">
+            <tr>
+                <td width="639" height="525" bgcolor="white">
+                    <p class="MsoNormal"><font size="4">Admission</font></p>
 
-<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
-<table width="639" height="525" cellpadding="0" cellspacing="0" bgcolor="#FFCC00">
-    <tr>
-        <td width="639" height="525" bgcolor="white">
-            <p class=MsoNormal><font size="4">Admission</font></p>
+                    <!-- Only one embedded PDF. The iframe displays the PDF in modern browsers. -->
+                    <div id="pdf-container">
+                        <iframe
+                            src="MS-PHD_Recruitment_Spring_2027.pdf"
+                            width="100%"
+                            height="100%"
+                            style="border: none;"
+                            aria-label="Admission PDF">
+                        </iframe>
+                    </div>
 
-            <!-- Embed the PDF. Use the relative path if the PDF is in the same folder. -->
-            <div id="pdf-container">
-                <!-- Primary: browser embedded PDF via <iframe> -->
-                <iframe
-                    src="MS-PHD_Recruitment_Spring_2027.pdf"
-                    width="100%"
-                    height="100%"
-                    style="border: none;">
-                    <!-- Fallback content shown inside browsers that don't support iframe PDF embedding -->
-                </iframe>
-
-                <!-- Better fallback for older browsers: <object> with an explicit download link -->
-                <object
-                    data="MS-PHD_Recruitment_Spring_2027.pdf"
-                    type="application/pdf"
-                    width="100%"
-                    height="100%"
-                    aria-label="Admission PDF">
-                    <p>Your browser does not support embedded PDFs. You can
-                        <a href="/admission/MS-PHD_Recruitment_Spring_2027.pdf" target="_blank" rel="noopener">open or download the PDF</a>.
-                    </p>
-                </object>
-            </div>
-
-            <!-- Optional short note / link for accessibility -->
-            <p><font size="2">If the PDF does not open in your browser, <a href="/admission/MS-PHD_Recruitment_Spring_2027.pdf" target="_blank" rel="noopener">click here to open it in a new tab</a>.</font></p>
-
-       </td>
-    </tr>
-</table>
-</body>
-
+                    <!-- Fallback link for browsers that cannot display the PDF -->
+                    <p><font size="2">If the PDF does not open in your browser, you can
+                        <a href="/admission/MS-PHD_Recruitment_Spring_2027.pdf" target="_blank" rel="noopener">open or download the PDF here</a>.
+                    </font></p>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>

@@ -9,7 +9,7 @@
             /* Make the embedded PDF responsive inside the content cell */
             #pdf-container { width: 100%; height: 525px; }
             @media (min-width: 640px) {
-                /* if you want the PDF area taller on larger screens */
+                /* make the PDF area taller on larger screens */
                 #pdf-container { height: 75vh; min-height: 525px; }
             }
         </style>
@@ -21,24 +21,13 @@
         <td width="639" height="525" bgcolor="white">
             <p class=MsoNormal><font size="4">Admission</font></p>
 
-            <!-- Embed the PDF. Use the relative path if the PDF is in the same folder. -->
-            <div id="pdf-container">
-                <!-- Primary: browser embedded PDF via <iframe> -->
-                <iframe
-                    src="MS-PHD_Recruitment_Spring_2027.pdf"
-                    width="100%"
-                    height="100%"
-                    style="border: none;">
-                    <!-- Fallback content shown inside browsers that don't support iframe PDF embedding -->
-                </iframe>
-
-                <!-- Better fallback for older browsers: <object> with an explicit download link -->
+            <div id="pdf-container" role="region" aria-label="Admission PDF">
+                <!-- Embed the PDF. Use absolute path to be explicit on GitHub Pages. -->
                 <object
-                    data="MS-PHD_Recruitment_Spring_2027.pdf"
+                    data="/admission/MS-PHD_Recruitment_Spring_2027.pdf"
                     type="application/pdf"
                     width="100%"
-                    height="100%"
-                    aria-label="Admission PDF">
+                    height="100%">
                     <p>Your browser does not support embedded PDFs. You can
                         <a href="/admission/MS-PHD_Recruitment_Spring_2027.pdf" target="_blank" rel="noopener">open or download the PDF</a>.
                     </p>
